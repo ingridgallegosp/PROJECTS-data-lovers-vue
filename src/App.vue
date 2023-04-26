@@ -15,7 +15,7 @@ const getData = async () => {
   //Cuando se ejecute el fetch quiero que los datos con los q responda la API se guarden en una constante llamada json
   const json = await res.json(); //para q lo formatee como jason y no lo pase como texto
   console.log(json);
-  //cambio el id para hacerlo manejable
+  //se mapea el id para hacerlo manejable
   const personajes = json.map((element, index) => {
     element.id = index + 1;
     return element;
